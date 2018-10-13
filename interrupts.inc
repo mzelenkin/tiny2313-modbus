@@ -88,7 +88,7 @@ UDRIE_Hdnl:
     ANDI    R16, ~(1<<UDRIE)
     OUT     UCSRB, R16
 
-    ; Обнуляем счетчик принятых байт
+    ; Обнуляем счетчик длинны сообщения
     CLR     R16
     STS     usart_tx_msg_len, R16
 

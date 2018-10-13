@@ -40,7 +40,7 @@ modbus_check:
     ADD     ZL, R16
     ADC     ZH, R0
 
-    LDI     R17, 0x01
+    MOV     R17, R16
     IJMP
 
 ; Адрес пакета не совпадает с адресом нашего устройства
@@ -109,17 +109,17 @@ modbus_clrbuff1:
 
     RET
 
-
+;
 modbus_funcs_tbl:
     RJMP    error_func
     RJMP    error_func
     RJMP    error_func
     RJMP    error_func
+    RJMP    error_func
+    RJMP    error_func
+    RJMP    error_func
+    RJMP    error_func
     RJMP    modbus_0x04
-    RJMP    error_func
-    RJMP    error_func
-    RJMP    error_func
-    RJMP    error_func
     RJMP    error_func
     RJMP    error_func
     RJMP    error_func

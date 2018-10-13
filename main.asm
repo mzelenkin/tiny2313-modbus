@@ -130,6 +130,15 @@ start:
     LDI     R16, 4
     STS     modbus_addr, R16
 
+    LDI     R16, 0x34
+    STS     mb_input_registers, R16
+    LDI     R16, 0
+    STS     mb_input_registers+1, R16
+    LDI     R16, 0x63
+    STS     mb_input_registers+2, R16
+    LDI     R16, 0x01
+    STS     mb_input_registers+3, R16
+
 ; -------------------------------------------
 ; Разрешаем прерывания
     SEI
